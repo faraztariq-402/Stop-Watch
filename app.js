@@ -6,6 +6,28 @@ let intervalId;
 let hours = 0;
 let minutes = 0;
 let seconds = 0;
+let buttons = [start, stop, reset]; // Store the buttons in an array
+
+buttons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    // Add the 'button-active' class to the clicked button
+    button.classList.add("button-active");
+
+    // Remove the 'button-active' class from other buttons
+    buttons.forEach(function(otherButton) {
+      if (otherButton !== button) {
+        otherButton.classList.remove("button-active");
+      }
+    });
+  });
+});
+
+
+
+
+
+
+
 
 start.addEventListener("click", function() {
   if (!intervalId) { // Check if interval is not already running

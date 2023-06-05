@@ -1,4 +1,6 @@
-
+.button-active {
+    opacity: 0.5;
+  }
 .parent{
     display: flex;
     background: linear-gradient(purple,rgb(187, 26, 53));
@@ -15,4 +17,16 @@ p{
     font-size: 5rem;
     font-weight: bold;
     text-align: center;
+}
+#start:hover,
+#stop:hover,
+#reset:hover {
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+#start:active,
+#stop:active,
+#reset:active {
+  opacity: 0.5;
 }
